@@ -1,0 +1,36 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/xml; charset=utf-8" />
+<title>Simple calendar setups [popup calendar]</title>
+  <link rel="stylesheet" type="text/css" media="all" href="calendar-brown.css" title="blue" />
+  <script type="text/javascript" src="calendar.js"></script>
+  <script type="text/javascript" src="lang/calendar-en.js"></script>
+  <script type="text/javascript" src="calendar-setup.js"></script>
+</head>
+<body>
+<form action="#" method="get">
+<table cellspacing="0" cellpadding="0" style="border-collapse: collapse"><tr>
+ <td><input type="text" name="date" id="f_date_c" readonly="1" /></td>
+ <td><img src="img.gif" id="f_trigger_c" style="cursor: pointer; border: 1px solid red;" title="Date selector"
+      onmouseover="this.style.background='red';" onmouseout="this.style.background=''" /></td>
+</table>
+</form>
+<script type="text/javascript">
+    Calendar.setup({
+        inputField     :    "f_date_c",     // id of the input field
+        ifFormat       :    "%m-%d-%Y",      // format of the input field
+        button         :    "f_trigger_c",  // trigger for the calendar (button ID)
+        align          :    "Tl",           // alignment (defaults to "Bl")
+        singleClick    :    true
+    });
+</script>
+
+
+
+</body>
+</html>
+
+
+
+
+

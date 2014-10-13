@@ -1,0 +1,35 @@
+# Don't listing directory
+Options -Indexes
+
+# Follow symbolic links
+Options +FollowSymLinks
+
+# Default handler
+DirectoryIndex index.php
+
+rewriteEngine On
+
+#RewriteBase /senditnow/site
+
+RewriteBase /
+
+RewriteRule ^local/([^/]+/.+)$ $1
+
+
+rewriteRule ^mtb/(.*)/ mtb_details.php?mid=$1 [L]
+
+rewriteRule ^new/(.*)/ news_details.php?nid=$1 [L]
+
+rewriteRule ^learning/(.*)/ learning_details.php?lid=$1 [L]
+
+rewriteRule ^provider/(.*)/ provider-details.php?pid=$1 [L]
+
+rewriteRule ^prodet/(.*)/(.*)/ provider-details.php?pid=$1&ptyp=$2 [L]
+
+
+#rewriteRule ^ustat/(.*)/(.*)/ user_details.php?uid=$1&lnk=$2 [L]
+
+#rewriteRule ^uimg/(.*)/(.*)/(.*)/ user_details.php?uid=$1&lnk=$2&imgg=$3 [L]
+
+
+#IndexIgnore *

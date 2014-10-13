@@ -1,5 +1,0 @@
-moneytransferhelp
-=================
-
-
-Hello Karthik. 
